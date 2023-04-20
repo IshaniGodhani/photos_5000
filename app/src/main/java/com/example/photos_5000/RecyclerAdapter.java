@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,20 +31,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.View_Holder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapter.View_Holder holder, int position) {z
         Datamodel datamodel=list.get(position);
 
         int aid= datamodel.getAlbumId();
         int id= datamodel.getId();
         String title=datamodel.getTitle();
-        String url=datamodel.getUrl();
+        int url=datamodel.getUrl();
         String thumbnail=datamodel.getThumbnailUrl();
 
         holder.AlbumId.setText(""+aid);
         holder.Id.setText(""+id);
         holder.Title.setText(""+title);
-        holder.Url.setText(""+url);
-        holder.Thumbnail.setText(""+thumbnail);
+        holder.Url.setImageBitmap(""+url);
+        holder.Thumbnail.setImageBitmap(""+thumbnail);
     }
 
     @Override
@@ -52,7 +53,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.View_H
     }
 
     public class View_Holder extends RecyclerView.ViewHolder {
-        TextView AlbumId,Id,Title,Url,Thumbnail;
+        TextView AlbumId,Id,Title;
+        ImageView Url,Thumbnail;
         public View_Holder(@NonNull View itemView) {
             super(itemView);
             AlbumId=itemView.findViewById(R.id.item_aid);

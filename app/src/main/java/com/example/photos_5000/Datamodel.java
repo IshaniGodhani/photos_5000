@@ -4,10 +4,10 @@ public class Datamodel {
     private Integer albumId;
     private Integer id;
     private String title;
-    private String url;
+    private Integer url;
     private String thumbnailUrl;
 
-    public Datamodel(Integer albumId, Integer id, String title, String url, String thumbnailUrl) {
+    public Datamodel(Integer albumId, Integer id, String title, Integer url, String thumbnailUrl) {
         this.albumId = albumId;
         this.id = id;
         this.title = title;
@@ -39,11 +39,11 @@ public class Datamodel {
         this.title = title;
     }
 
-    public String getUrl() {
+    public Integer getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(Integer url) {
         this.url = url;
     }
 

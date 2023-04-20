@@ -30,21 +30,21 @@
         android:hint="title"
         android:textColor="@color/black"/>
 
-    <TextView
+    <ImageView
         android:id="@+id/item_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:hint="url"
+        android:src="@mipmap/ic_launcher"
         android:textColor="@color/black"/>
-    <TextView
+    <ImageView
         android:id="@+id/item_thumbnailUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:hint="thumbnailUrl"
+        android:src="@mipmap/ic_launcher"
         android:textColor="@color/black"/>
 
 </LinearLayout>

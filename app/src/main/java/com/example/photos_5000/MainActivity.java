@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                         Integer albumid=mainObj.getInt("albumId");
                         Integer id=mainObj.getInt("id");
                         String title=mainObj.getString("title");
-                        String url=mainObj.getString("url");
+                        Integer url=mainObj.getInt("url");
                         String thumbnailurl=mainObj.getString("thumbnailUrl");
 
                         Datamodel datamodel=new Datamodel(albumid,id,title,url,thumbnailurl);
